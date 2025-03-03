@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giorgio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500&amp;f[]=satoshi@300,400,500&amp;display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <!-- <div id="loader" class="loader">
+        <div class="loading"></div>
+    </div> -->
+
+    <!-- <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div> -->
+
+
+
+
+
+
+    
+    <div class="sidebar">
+        <a href="#" id="zoom" class="menu-link" onclick="home()">HOME<span>(0)</span></a>
+        <a href="#" id="zoom" class="menu-link" onclick="portfolio()">PORTFOLIO<span>(1)</span></a>
+        <a href="#" id="zoom" class="menu-link" onclick="about()">MY STORY<span>(2)</span></a>
+        <!-- <a href="#" id="zoom" class="menu-link" onclick="contact()">SAY HI<span>(3)</span></a> -->
+        <a href="#" id="zoom" class="menu-link btn w-button" onclick="contact()">
+            SAY 
+            <span class="heytextsizer">
+                <span class="heytext">HI</span>
+            </span>
+            <span class="index-span">(3)</span></a>
+    </div>
+
+    <header>
+        <h1 onclick="homeNoMenu()">vol. 1</h1>
+        <h1 onclick="homeNoMenu()">Giorgio</h1>
+        <div id="zoom" onclick="toggleMenu(); menuButtonClick()" class="menu-icon" id="menuIcon">
+            <div class="menu-icon__lines">
+              <span id="line1"></span>
+              <span id="line2"></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="home">
+        <img src="img/banner.png">
+        <h1>to build<br>experiences.</h1>
+        <h3><span class="f">not</span> <span class="s">just</span> <span class="t">code.</span></h3>
+        <a id="zoom" href="#" onclick="portfolioNoMenu()">Projects →</a>
+    </div>
+    
+    <!-- <div id="ycs" class="arrow"></div> -->
+
+    <div class="about">
+        <div class="about-what m-r">
+            <h1 style="position: relative; font-size: 100px; color: rgba(255, 255, 255, 0.055);">
+                WHO?
+                <span style="position: absolute; bottom: 10px; left: 10px; color: #fff">WHO?</span>
+            </h1>
+            <div class="right-a">
+                <div class="apost">
+                    <img src="img/apostrophe_PNG25.png">
+                    <img src="img/apostrophe_PNG25.png">
+                </div>
+                <p>I am 18yo full-stack web developer and designer from Padua, Italy. I specialize in building responsive websites and designing visually appealing interfaces.</p>
+            </div>
+        </div>
+    
+        <div id="box" onclick="scrollToNextHuh(event)">
+            <svg> 
+                <defs>
+                    <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#594988;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#594988;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect stroke="url(#linear-gradient)" />
+            </svg>
+            <i class='bx bx-down-arrow-alt' style='font-size: 24px; color:#9a81e7'></i>
+        </div>
+    
+        <div class="about-what">
+            <div class="right-a m-0">
+                <div class="apost">
+                    <img src="img/apostrophe_PNG25.png">
+                    <img src="img/apostrophe_PNG25.png">
+                </div>
+                <p>The goal is simple: to create outstanding websites and apps that make your business shine and bring out the best in what I do. I take real pride in every project I take on, no matter the size, and I'm flexible enough to tackle anything you throw my way. "Bring it," as they say in those cringey movies.</p>
+            </div>
+            <h1 style="position: relative; font-size: 100px; color: rgba(255, 255, 255, 0.055);">
+                HUH?
+                <span style="position: absolute; bottom: 10px; left: 10px; color: #fff">HUH?</span>
+            </h1>
+        </div>
+    
+        <div id="box" onclick="scrollToNextHuh(event)">
+            <svg> 
+                <defs>
+                    <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#594988;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#594988;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect stroke="url(#linear-gradient)" />
+            </svg>
+            <i class='bx bx-down-arrow-alt' style='font-size: 24px; color:#9a81e7'></i>
+        </div>
+
+        <div class="about-what">
+            <h1 style="position: relative; font-size: 100px; color: rgba(255, 255, 255, 0.055);">
+                WHAT?
+                <span style="position: absolute; bottom: 10px; left: 10px; color: #fff">WHAT?</span>
+            </h1>
+            <div class="right-a what">
+                <div class="rihgt-cnt">
+                    <div class="what-i p1">
+                        <img src="img/figma-logo.svg">
+                        <div class="dx">
+                            <h3>Figma</h3>
+                            <p>Design Tool</p>
+                        </div>
+                    </div>
+                    <div class="what-i p2">
+                        <img src="img/react.svg">
+                        <div class="dx">
+                            <h3>React</h3>
+                            <p>JavaScript Library</p>
+                        </div>
+                    </div>
+                    <div class="what-i p3">
+                        <img src="img/mongodb.svg">
+                        <div class="dx">
+                            <h3>MongoDB</h3>
+                            <p>Backend Database</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rihgt-cnt">
+                    <div class="what-i p4">
+                        <img src="img/git.svg">
+                        <div class="dx">
+                            <h3>Git</h3>
+                            <p>Version control</p>
+                        </div>
+                    </div>
+                    <div class="what-i p5">
+                        <img src="img/nodejs.svg">
+                        <div class="dx">
+                            <h3>Node.js</h3>
+                            <p>Backend tool</p>
+                        </div>
+                    </div>
+                    <div class="what-i p6">
+                        <img src="img/vite.svg">
+                        <div class="dx">
+                            <h3>Vite</h3>
+                            <p>Frontend tool</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="box" onclick="scrollToNextHuh(event)">
+            <svg> 
+                <defs>
+                    <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#594988;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#594988;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect stroke="url(#linear-gradient)" />
+            </svg>
+            <i class='bx bx-down-arrow-alt' style='font-size: 24px; color:#9a81e7'></i>
+        </div>
+    
+    
+        <div class="about-what">
+            <div class="right-a m-0 m-f">
+                <p>So, if you have an idea and want someone to have a look at it? Get in touch or something.</p>
+                <a href="#" onclick="contactNoMenu()">GET IN TOUCH <i class='bx bx-arrow-back bx-rotate-180' ></i></a>
+            </div>
+            <h1 style="position: relative; font-size: 100px; color: rgba(255, 255, 255, 0.055);">
+                SO?
+                <span style="position: absolute; bottom: 10px; left: 10px; color: #fff">SO?</span>
+            </h1>
+        </div>
+    
+        <div id="box" class="toTop" onclick="scrollToTop()">
+            <svg> 
+                <defs>
+                    <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#594988;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#594988;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <rect stroke="url(#linear-gradient)" />
+            </svg>
+            <i class='bx bx-down-arrow-alt' style='font-size: 24px; color:#9a81e7'></i>
+        </div>
+    </div>
+    
+
+    <div class="box1"></div>
+
+    <div class="portfolio">
+        <div class="slider variable-width">
+            <div>
+                <span class="slide-number">01</span>
+                <h1 id="zoom">Giorgio</h1>
+                <p>Portfolio</p>
+                <img class="slide" src="img/Giorgio.png">
+                <div class="links">
+                    <a target="_blank" href="https://github.com/S0dxu/web-portfolio" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="#" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+            <div>
+                <span class="slide-number">02</span>
+                <h1 id="zoom">Bloom</h1>
+                <p>Ecommerce</p>
+                <img class="slide" src="img/Bloom.png">
+                <div class="links">
+                    <a target="_blank" href="https://bloom-ecommerce22.netlify.app/" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="https://github.com/S0dxu/bloom-front" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+            <div>
+                <span class="slide-number">03</span>
+                <h1 id="zoom">Pixo</h1>
+                <p>Social Media</p>
+                <img class="slide" src="img/Pixo.png">
+                <div class="links">
+                    <a target="_blank" href="https://pixo-v1.netlify.app/" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="https://github.com/S0dxu/pixo-front" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+            <div>
+                <span class="slide-number">04</span>
+                <h1 id="zoom">Indovino</h1>
+                <p>Machine Learning</p>
+                <img class="slide" src="img/Indovino.png">
+                <div class="links">
+                    <a target="_blank" href="https://ml-number.netlify.app/" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="https://github.com/S0dxu/indovino" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+            <div>
+                <span class="slide-number">05</span>
+                <h1 id="zoom">Yarn</h1>
+                <p>Real Time App</p>
+                <img class="slide" src="img/Yarn.png">
+                <div class="links">
+                    <a target="_blank" href="https://yarn-chat.netlify.app/" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="https://github.com/S0dxu/yarn-front" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+            <div>
+                <span class="slide-number">06</span>
+                <h1 id="zoom">Colorle</h1>
+                <p>Simple Game</p>
+                <img class="slide" src="img/Colorle.png">
+                <div class="links">
+                    <a target="_blank" href="https://colorlegame.netlify.app/" target="_blank"><i class='bx bx-link' ></i></a>
+                    <a target="_blank" href="https://github.com/S0dxu/colorle-game" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="contact">
+        <img src="img/calendar.png" alt="Calendar Icon">
+        <h1>Let's talk</h1>
+        <h2>Find out if I am available and start your project</h2>
+
+        <div class="stage stage1">
+            <div class="cnt">
+                <p>Enter your name*</p>
+                <input type="text" id="name" required>
+            </div>
+            <button onclick="nextStage(1, 1)">Next step</button>
+        </div>
+    
+        <div class="stage stage2">
+            <div class="cnt">
+                <p>Enter your e-mail*</p>
+                <input type="email" id="email" required>
+            </div>
+            <div class="steps">
+                <button onclick="nextStage(2, -1)">Previous step</button>
+                <button onclick="nextStage(2, 1)">Next step</button>
+            </div>
+        </div>
+
+        <div class="stage stage3">
+            <div class="cnt">
+                <p>Enter the message*</p>
+                <input type="text" id="message" required>
+            </div>
+            <div class="steps">
+                <button onclick="nextStage(3, -1)">Previous step</button>
+                <button onclick="nextStage(3, 1)">Submit</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="contact">
+        <div class="left-cnt">
+            <h1>GET IN</h1>
+            <h1 class="fl"><img src="img/haed.png">TOUCH</h1>
+        </div>
+        <div class="right-cnt">
+            <h2>I genuinely care about you and and your wellbeing. Let me know how I can serve you better.</p>
+            <div class="social">
+                <a id="zoom" target="_blank" href="mailto:saddoooh@gmail.com"><i class='bx bx-envelope' ></i></a>
+                <a id="zoom" target="_blank" href="https://github.com/S0dxu/"><i class='bx bxl-github' ></i></a>
+                <a id="zoom" target="_blank" href="https://t.me/TristeFare"><i class='bx bxl-telegram' ></i></a>
+            </div>  
+        </div>
+        <div class="bottom"> <!-- I already know, it's absolutely horrible, but I did it months ago and I don't wanna change it.. -->
+            <div class="string">
+                <div class="track">
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                    <div class="obj-slide" id="zoom">
+                        <a href="#">saddoooh@gmail.com﹒</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</body>
+<script src="load.js"></script>
+<script src="cursor.js"></script>
+<script src="slider.js"></script>
+<script src="script.js"></script>
+<script src="scroll.js"></script>
+<script src="contact.js"></script>
+</html>

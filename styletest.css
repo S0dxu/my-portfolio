@@ -1,0 +1,83 @@
+.portfolio {
+  display: block !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    top: 180px;
+}
+
+
+.super {
+    z-index: 9;
+}
+
+.l {
+    animation: goAwayL 2s ease forwards;
+    position: relative;
+}
+
+.r {
+    animation: goAwayR 2s ease forwards;
+    position: relative;
+}
+
+.c {
+    animation: zoooom 2s 0.5s ease forwards;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    opacity: 0;
+    z-index: 11;
+    animation: fadeIn 0s 0s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes goAwayL {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+        display: none;
+    }
+}
+
+@keyframes goAwayR {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100%;
+        display: none;
+    }
+}
+
+@keyframes zoooom {
+    0% {
+        
+    }
+    100% {
+       transform: scale(2);
+    }
+}
+
+.rest {
+    position: relative;
+    top: 100vh;
+    height: 100vh;
+    z-index: 10;
+}
